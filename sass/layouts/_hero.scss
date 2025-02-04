@@ -1,0 +1,123 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.hero {
+
+    &__container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include breakpoint(tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include breakpoint(desktopxl) {
+            padding: 0;
+            position: relative;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 180px;
+            background: linear-gradient(to right, $color-black 50%, white 50%);
+        }
+
+        .main-img {
+            margin-bottom: 32px;
+            width: 100%;
+
+            @include breakpoint(tablet) {
+                display: none;
+            }
+        }
+
+        .secondary-img {
+            display: none;
+
+            @include breakpoint(tablet) {
+                display: inline-block;
+                width: 57%;
+                height: auto;
+                z-index: -1;
+                object-fit: cover;
+            }
+
+            @include breakpoint(desktopxl) {
+                width: 38%;
+                height: auto;
+                z-index: 0;
+            }
+        }
+    }
+
+    &__content {
+        padding: 0 16px;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            max-width: 45%;
+            padding: 0;
+            transform: translateX(-50px);
+        }
+
+        @include breakpoint(desktopxl) {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-51%);
+            display: flex;
+            gap: 33%;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 71vw;
+            min-width: 60vw;
+            margin-bottom: 150px;
+            z-index: 1;
+        }
+
+        h1 {
+            @include title();
+
+            @include breakpoint(tablet) {
+                margin-bottom: 46px;
+                font-size: 70px;
+                line-height: 65px;
+            }
+
+            @include breakpoint(desktopxl) {
+                margin-bottom: 0;
+                font-size: 84px;
+                line-height: 77px;
+                min-width: 397px;
+                color: white;
+            }
+        }
+
+        p {
+            margin-bottom: 46px;
+        }
+
+        .btn-right {
+            @include button-right();
+
+            .arrow {
+                width: 10px;
+                height: 20px;
+
+                img {
+                    width: 8px;
+                }
+            }
+
+            &:hover {
+                background: linear-gradient(to right, $color-fleshed 77.66%, $color-black 22.34%);
+            }
+
+        }
+    }
+}

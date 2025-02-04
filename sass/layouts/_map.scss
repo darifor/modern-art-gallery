@@ -1,0 +1,43 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.map {
+
+    &__container {
+        height: 550px;
+        width: 100%;
+        margin: 0 auto;
+        background-image: url("../../img/small-map.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include breakpoint(tablet) {
+            padding: 0 39px;
+            background-image: url("../../img/medium-map.png");
+        }
+
+        @include breakpoint(desktopxl) {
+            padding: 0 130px;
+            background-image: url("../../img/big-map.png");
+        }
+
+        .btn-left {
+            @include button-left();
+  
+            .arrow {
+                width: 10px;
+                height: 20px;
+            
+                img {
+                    width: 8px;
+                }
+            }
+
+            &:hover {
+                background: linear-gradient(to right, $color-black 22.34%, $color-fleshed 22.34% 100%);
+            }
+
+        }
+    }
+}

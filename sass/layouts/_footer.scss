@@ -1,0 +1,78 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.footer {
+    background-color: $color-black;
+
+    &__home,
+    &__location {
+
+        &-container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 48px 32px;
+            color: white;
+
+            @include breakpoint(tablet) {
+                display: flex;
+                height: auto;
+                justify-content: space-around;
+                align-items: flex-start;
+                padding: 56px 40px;
+                gap: 16%;
+            }
+
+            @include breakpoint(desktopxl) {
+                max-width: 1110px;
+                padding: 80px 0;
+                gap: 19%;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 26px;
+                margin-bottom: 38px;
+
+                @include breakpoint(tablet) {
+                    margin-bottom: 0;
+                }
+
+                @include breakpoint(desktopxl) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+    }
+
+    &__logo {
+        margin-bottom: 38px;
+
+        @include breakpoint(desktopxl) {
+            width: 160px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+
+        a {
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: rotate(-40deg) scale(1.2);
+            }
+        }
+    }
+
+    &__location {
+        background-color: $color-fleshed;
+
+        &-container {
+            color: $color-black;
+        }
+    }
+
+}
