@@ -1,0 +1,93 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.location {
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 48px;
+        padding-right: 16px;
+        padding-bottom: 56px;
+        padding-left: 16px;
+        background-color: $color-black;
+        color: white;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16%;
+            padding-top: 88px;
+            padding-left: 39px;
+            padding-right: 39px;
+            padding-bottom: 80px;
+        }
+
+        @include breakpoint(desktopxl) {
+            padding-top: 104px;
+            padding-left: 165px;
+            padding-right: 165px;
+            padding-bottom: 128px;
+            gap: 29%;
+        }
+
+        h2 {
+            @include subtitle();
+            color: white;
+            margin-bottom: 48px;
+
+            @include breakpoint(tablet) {
+                margin-bottom: 0;
+                font-size: 55px;
+                line-height: 50px;
+            }
+
+            @include breakpoint(desktopxl) {
+                font-size: 70px;
+                line-height: 70px;
+            }
+        }
+
+        h3 {
+            font-family: $font-title;
+            font-size: 32px;
+            font-weight: 900;
+            color: $color-fleshed;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            @include breakpoint(desktopxl) {
+                font-size: 36px;
+                line-height: 36px;
+                margin-bottom: 24px;
+            }
+        }
+
+        address {
+            font-style: normal;
+            margin-bottom: 20px;
+
+            @include breakpoint(desktopxl) {
+                font-size: 22px;
+                line-height: 32px;
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    &__content {
+        @include breakpoint(tablet) {
+            max-width: 400px;
+        }
+
+        @include breakpoint(desktopxl) {
+            max-width: 600px;
+        }
+    }
+
+    &__schedule {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
