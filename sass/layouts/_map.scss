@@ -8,6 +8,8 @@
         width: 100%;
         margin: 0 auto;
         background-image: url("../../img/small-map.png");
+        // sólo para build y deploy
+        //background-image: url('/img/small-map.png'); 
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -15,11 +17,17 @@
         @include breakpoint(tablet) {
             padding: 0 39px;
             background-image: url("../../img/medium-map.png");
+            // sólo para build y deploy
+            //background-image: url('/img/medium-map.png');
+
         }
 
         @include breakpoint(desktopxl) {
             padding: 0 130px;
             background-image: url("../../img/big-map.png");
+            // sólo para build y deploy
+            //background-image: url('/img/big-map.png');
+
         }
 
         .btn-left {
