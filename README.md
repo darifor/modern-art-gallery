@@ -4,6 +4,7 @@
 [![Html](https://img.shields.io/badge/HTML-white?style=for-the-badge&logo=html5&logoColor=white&labelColor=black&color=%23E34F26)]()
 [![Css](https://img.shields.io/badge/css-white?style=for-the-badge&logo=css3&logoColor=white&labelColor=black&color=blue)]()
 [![Sass](https://img.shields.io/badge/SASS-black?style=for-the-badge&logo=Sass&logoColor=white&labelColor=black&color=%23CC6699)]()
+[![Static Badge](https://img.shields.io/badge/VITE-green?style=for-the-badge&logo=vite&logoColor=white&logoSize=auto&labelColor=black)]()
 
 ## Descripción del proyecto :memo:
 <p>Este proyecto es una página web para una galería de arte moderno ubicada en la ciudad de Newport, Rhode Island (US) La web ofrece una experiencia visualmente atractiva e informativa para los visitantes. El diseño, limpio y moderno, junto con la adaptabilidad, garantizan una navegación cómoda y una presentación óptima de las obras de arte en cualquier dispositivo.</p>
